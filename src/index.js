@@ -1,17 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from "react-router-dom";
+import { MainApp } from './componentes/useContext/MainApp';
+//import { CounterApp } from './componentes/useState/CounterApp';
+//import Hooks from './Hooks';
+//import { AppTodo } from './componentes/useReduce/AppTodo';
+// import { CounterCustom } from './componentes/useState/CounterCustom';
+// import { SimpleForm } from './componentes/useEfect/SimpleForm';
+//import { FormCustom } from './componentes/useEfect/FormCustom';
+//import { Multiplehooks } from './componentes/examples/Multiplehooks';
+//import { FocusScreem } from './componentes/useRef/FocusScreen';
+//import { RealExample } from './componentes/useRef/RealExample.js';
+//import { Layout } from './componentes/useLayout/Layout';
+//import { Memorize } from './componentes/useMemo/Memorize.js';
+//import { MemorizeHook } from './componentes/useMemo/MemorizeHook';
+//import { Callbacks } from './componentes/useMemo/Callbaks';
+//import { Padre } from './componentes/07-tarea-memo/Padre';
+//import './componentes/useReduce/IntroReduce.js';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const root = createRoot(document.getElementById('root'));
+root.render( 
+    <BrowserRouter>
+        <MainApp />
+    </BrowserRouter>
+
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
